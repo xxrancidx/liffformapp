@@ -52,21 +52,24 @@
                 <input class="form-control w-100 mt-3" name="otherName" type="text" placeholder="お名前/所属団体名">
             </div>
 
-            <div class="mt-3 row">
-                <div class="col-4">
-                    <input class="form-control w-100" name="fullDayCount" type="number" min="0" 
-                           pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                           placeholder="全日🌕出向の人数">
-                </div>
-                <div class="col-4">
-                    <input class="form-control w-100" name="halfDayCount" type="number" min="0"
-                           pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                           placeholder="半日🌓出向の人数">
-                </div>
-                <div class="col-4">
-                    <input class="form-control w-100" name="nightCount" type="number" min="0"
-                           pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                           placeholder="夜間🌙出向の人数">
+            <div class="mt-3">
+                <p class="mb-2">出向の人数</p>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="form-control w-100" name="fullDayCount" type="number" min="0" 
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="全日🌕">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="halfDayCount" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="半日🌓">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="nightCount" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="夜間🌙">
+                    </div>
                 </div>
             </div>
 
