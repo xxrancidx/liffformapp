@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -47,36 +48,162 @@
             <p class="mt-3">ご自身以外の出向状況</p>
             <p class="text-muted">※出向状況ごとに人数は分けてご入力ください。</p>
         </div>
-        <div id="otherAssignmentContainer" style="display: none;">            
-            <div>
-                <input class="form-control w-100 mt-3" name="otherName" type="text" placeholder="お名前/所属団体名">
-            </div>
 
+        <!-- 1つ目のコンテナ -->
+        <p class="mt-3 mb-0" style="display: none;" id="label1">1.</p>
+        <div id="otherAssignmentContainer1" class="otherAssignmentContainer" style="display: none;">            
+            <div>
+                <input class="form-control w-100 mt-3" name="otherName1" type="text" placeholder="お名前/所属団体名">
+            </div>
             <div class="mt-3">
                 <p class="mb-2">出向の人数</p>
                 <div class="row">
                     <div class="col-4">
-                        <input class="form-control w-100" name="fullDayCount" type="number" min="0" 
+                        <input class="form-control w-100" name="fullDayCount1" type="number" min="0" 
                                pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                placeholder="全日🌕">
                     </div>
                     <div class="col-4">
-                        <input class="form-control w-100" name="halfDayCount" type="number" min="0"
+                        <input class="form-control w-100" name="halfDayCount1" type="number" min="0"
                                pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                placeholder="半日🌓">
                     </div>
                     <div class="col-4">
-                        <input class="form-control w-100" name="nightCount" type="number" min="0"
+                        <input class="form-control w-100" name="nightCount1" type="number" min="0"
                                pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                placeholder="夜間🌙">
                     </div>
                 </div>
             </div>
-
             <div>
-                <input class="form-control w-100 mt-3" name="otherSiteName" type="text" placeholder="※出向先の現場名">
+                <input class="form-control w-100 mt-3" name="otherSiteName1" type="text" placeholder="※出向先の現場名">
             </div>
         </div>
+
+        <!-- 2つ目のコンテナ -->
+        <p class="mt-3 mb-0" style="display: none;" id="label2">2.</p>
+        <div id="otherAssignmentContainer2" class="otherAssignmentContainer" style="display: none;">            
+            <div>
+                <input class="form-control w-100 mt-3" name="otherName2" type="text" placeholder="お名前/所属団体名">
+            </div>
+            <div class="mt-3">
+                <p class="mb-2">出向の人数</p>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="form-control w-100" name="fullDayCount2" type="number" min="0" 
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="全日🌕">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="halfDayCount2" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="半日🌓">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="nightCount2" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="夜間🌙">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="form-control w-100 mt-3" name="otherSiteName2" type="text" placeholder="※出向先の現場名">
+            </div>
+        </div>
+
+        <!-- 3つ目のコンテナ -->
+        <p class="mt-3 mb-0" style="display: none;" id="label3">3.</p>
+        <div id="otherAssignmentContainer3" class="otherAssignmentContainer" style="display: none;">            
+            <div>
+                <input class="form-control w-100 mt-3" name="otherName3" type="text" placeholder="お名前/所属団体名">
+            </div>
+            <div class="mt-3">
+                <p class="mb-2">出向の人数</p>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="form-control w-100" name="fullDayCount3" type="number" min="0" 
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="全日🌕">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="halfDayCount3" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="半日🌓">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="nightCount3" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="夜間🌙">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="form-control w-100 mt-3" name="otherSiteName3" type="text" placeholder="※出向先の現場名">
+            </div>
+        </div>
+
+        <!-- 4つ目のコンテナ -->
+        <p class="mt-3 mb-0" style="display: none;" id="label4">4.</p>
+        <div id="otherAssignmentContainer4" class="otherAssignmentContainer" style="display: none;">            
+            <div>
+                <input class="form-control w-100 mt-3" name="otherName4" type="text" placeholder="お名前/所属団体名">
+            </div>
+            <div class="mt-3">
+                <p class="mb-2">出向の人数</p>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="form-control w-100" name="fullDayCount4" type="number" min="0" 
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="全日🌕">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="halfDayCount4" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="半日🌓">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="nightCount4" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="夜間🌙">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="form-control w-100 mt-3" name="otherSiteName4" type="text" placeholder="※出向先の現場名">
+            </div>
+        </div>
+
+        <!-- 5つ目のコンテナ -->
+        <p class="mt-3 mb-0" style="display: none;" id="label5">5.</p>
+        <div id="otherAssignmentContainer5" class="otherAssignmentContainer" style="display: none;">            
+            <div>
+                <input class="form-control w-100 mt-3" name="otherName5" type="text" placeholder="お名前/所属団体名">
+            </div>
+            <div class="mt-3">
+                <p class="mb-2">出向の人数</p>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="form-control w-100" name="fullDayCount5" type="number" min="0" 
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="全日🌕">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="halfDayCount5" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="半日🌓">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control w-100" name="nightCount5" type="number" min="0"
+                               pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                               placeholder="夜間🌙">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="form-control w-100 mt-3" name="otherSiteName5" type="text" placeholder="※出向先の現場名">
+            </div>
+        </div>
+
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
     
@@ -86,7 +213,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
-        // ***** LIFF ID *****
         const liffId = "2006480262-mQBgbR1d";
         initializeLiff(liffId);
 
@@ -111,13 +237,10 @@
             });
         }
 
-        // URLパラメータの取得
         const params = (new URL(document.location)).searchParams;
         const key = params.get('key');
 
-        // 出向日の入力用カレンダーの設定
         $(document).ready(function () {
-            // カレンダーの表示形式を日本形式に指定
             $.datepicker.regional['ja'] = {
                 closeText: '閉じる',
                 prevText: '前月',
@@ -136,10 +259,8 @@
                 yearSuffix: ''
             };
             
-            // リージョンを日本に指定
             $.datepicker.setDefaults($.datepicker.regional['ja']);
             
-            // 年の表示を更新する関数
             function updateYearDisplay() {
                 setTimeout(function() {
                     const currentYear = $('.ui-datepicker-year').text();
@@ -147,11 +268,10 @@
                 }, 1);
             }
             
-            // カレンダーの初期化（ボタン押下後も表示を維持するための処理）
             $(".datepicker").datepicker({
-                changeMonth: true,     // 月の変更を有効化
-                changeYear: false,     // 年の変更を無効化
-                showButtonPanel: true, // ボタンパネルを表示
+                changeMonth: true,
+                changeYear: false,
+                showButtonPanel: true,
                 beforeShow: function(input, inst) {
                     updateYearDisplay();
                 },
@@ -160,7 +280,6 @@
                 }
             });
 
-            // 出向内容 が報告のみの場合の 現場名 非表示処理
             $('select[name="assignmentDetails"]').change(function() {
                 const workDetailsContainer = $('#workDetailsContainer');
                 const workDetailsInput = $('input[name="workDetails"]');
@@ -174,21 +293,25 @@
                 }
             });
 
-            // 他の出向状況の表示制御
             $('select[name="otherAssignments"]').change(function() {
                 const otherDetailsContainer = $('#otherDetailsContainer');
-                const otherAssignmentContainer = $('#otherAssignmentContainer');
+                const otherAssignmentContainer = $('.otherAssignmentContainer');
                 
-                if ($(this).val() === 'はい') {
-                    otherDetailsContainer.show();
-                    otherAssignmentContainer.show();
-                } else {
-                    otherDetailsContainer.hide();
-                    otherAssignmentContainer.hide();
+                // ラベルの表示/非表示を制御
+                for (let i = 1; i <= 5; i++) {
+                    const label = $(`#label${i}`);
+                    if ($(this).val() === 'はい') {
+                        label.show();
+                        otherDetailsContainer.show();
+                        otherAssignmentContainer.show();
+                    } else {
+                        label.hide();
+                        otherDetailsContainer.hide();
+                        otherAssignmentContainer.hide();
+                    }
                 }
             });
 
-            // 現場名の入力状態に応じて他の出向先現場名の必須状態を制御
             $('input[name="workDetails"]').on('input', function() {
                 const otherSiteNameInput = $('input[name="otherSiteName"]');
                 if ($(this).val().trim() !== '') {
@@ -200,7 +323,6 @@
                 }
             });
 
-            // 他の出向状況が「はい」の場合の必須入力制御
             $('select[name="otherAssignments"]').change(function() {
                 const otherSiteNameInput = $('input[name="otherSiteName"]');
                 const mainWorkDetailsInput = $('input[name="workDetails"]');
@@ -215,7 +337,6 @@
             });
         });
 
-        // フォーム送信処理
         $(function () {
             $('form').submit(function () {
                 const workDate = $('input[name="workDate"]').val();
@@ -224,14 +345,28 @@
                 const workDetails = assignmentDetails === '報告のみ' ? '' : $('input[name="workDetails"]').val();
                 const otherAssignments = $('select[name="otherAssignments"]').val();
                 
-                const msg = `${workDate}\n${name}\n${assignmentDetails}\n${workDetails}\n${otherAssignments}`;
-                sendText(msg);
+                let msg = `${workDate},${name},${assignmentDetails},${workDetails},${otherAssignments}`;
 
+                // 他の出向者情報がある場合
+                if (otherAssignments === 'はい') {
+                    for (let i = 1; i <= 5; i++) {
+                        const otherName = $(`input[name="otherName${i}"]`).val() || '';
+                        const fullDayCount = $(`input[name="fullDayCount${i}"]`).val() || '0';
+                        const halfDayCount = $(`input[name="halfDayCount${i}"]`).val() || '0';
+                        const nightCount = $(`input[name="nightCount${i}"]`).val() || '0';
+                        const otherSiteName = $(`input[name="otherSiteName${i}"]`).val() || '';
+                        
+                        if (otherName || fullDayCount !== '0' || halfDayCount !== '0' || nightCount !== '0' || otherSiteName) {
+                            msg += `,${otherName},${fullDayCount},${halfDayCount},${nightCount},${otherSiteName}`;
+                        }
+                    }
+                }
+                
+                sendText(msg);
                 return false;
             });
         });
         
     </script>
-
 </body>
 </html>
