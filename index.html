@@ -43,7 +43,7 @@
             const liffId = "2006480262-mQBgbR1d";
             initializeLiff(liffId);
             
-            // 日本語ロケールの設定
+            // カレンダーの表示形式を日本形式に指定
             $.datepicker.regional['ja'] = {
                 closeText: '閉じる',
                 prevText: '前月',
@@ -62,7 +62,7 @@
                 yearSuffix: ''
             };
             
-            // デフォルトロケールを日本語に設定
+            // リージョンを日本に指定
             $.datepicker.setDefaults($.datepicker.regional['ja']);
             
             // 年の表示を更新する関数
