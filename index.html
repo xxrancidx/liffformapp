@@ -22,9 +22,15 @@
         <div>
             <input class="form-control w-100 mt-1 datepicker" name="workDate" required>
         </div>
-        <p class="mt-3">人数</p>
+        <p class="mt-3">ご自身の出向内容</p>
         <div>
-            <input class="form-control w-100 mt-1" name="workerCount" required>
+            <select class="form-control w-100 mt-1" name="assignmentDetails" required>
+                <option value=""></option>
+                <option value="全日出向">全日🌕出向</option>
+                <option value="半日出向">半日🌓出向</option>
+                <option value="夜間出向">夜間🌙出向</option>
+                <option value="報告のみ">自分自身は出向していない（報告のみ）</option>
+            </select>
         </div>
         <p class="mt-3">その他</p>
         <div>
@@ -116,10 +122,10 @@
                 const name = $('input[name="name"]').val();
                 const siteName = $('input[name="siteName"]').val();
                 const workDate = $('input[name="workDate"]').val();
-                const workerCount = $('input[name="workerCount"]').val();
+                const assignmentDetails = $('select[name="assignmentDetails"]').val();
                 const notes = $('input[name="notes"]').val();
                 
-                const msg = `${name}\n${siteName}\n${workDate}\n${workerCount}\n${notes}`;
+                const msg = `${name}\n${siteName}\n${workDate}\n${assignmentDetails}\n${notes}`;
                 sendText(msg);
 
                 return false;
