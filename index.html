@@ -293,6 +293,7 @@
                 }
             });
 
+            // 他の出向状況の表示制御
             $('select[name="otherAssignments"]').change(function() {
                 const otherDetailsContainer = $('#otherDetailsContainer');
                 const otherAssignmentContainer = $('.otherAssignmentContainer');
@@ -345,28 +346,35 @@
                 const workDetails = assignmentDetails === '報告のみ' ? '' : $('input[name="workDetails"]').val();
                 const otherAssignments = $('select[name="otherAssignments"]').val();
                 
-                let msg = `${workDate},${name},${assignmentDetails},${workDetails},${otherAssignments}`;
+                let msg = `${workDate}\n${name}\n${assignmentDetails}\n${workDetails}\n${otherAssignments}`;
 
-                // 他の出向者情報がある場合
+                // 他の出向状況が「はい」の場合、追加情報を含める
                 if (otherAssignments === 'はい') {
                     for (let i = 1; i <= 5; i++) {
-                        const otherName = $(`input[name="otherName${i}"]`).val() || '';
-                        const fullDayCount = $(`input[name="fullDayCount${i}"]`).val() || '0';
-                        const halfDayCount = $(`input[name="halfDayCount${i}"]`).val() || '0';
-                        const nightCount = $(`input[name="nightCount${i}"]`).val() || '0';
-                        const otherSiteName = $(`input[name="otherSiteName${i}"]`).val() || '';
-                        
-                        if (otherName || fullDayCount !== '0' || halfDayCount !== '0' || nightCount !== '0' || otherSiteName) {
-                            msg += `,${otherName},${fullDayCount},${halfDayCount},${nightCount},${otherSiteName}`;
+                        const otherName = $(`input[name="otherName${i}"]`).val();
+                        const fullDay = $(`input[name="fullDayCount${i}"]`).val();
+                        const halfDay = $(`input[name="halfDayCount${i}"]`).val();
+                        const night = $(`input[name="nightCount${i}"]`).val();
+                        const siteName = $(`input[name="otherSiteName${i}"]`).val();
+
+                        // 名前が入力されている場合のみ追加
+                        if (otherName) {
+                            let counts = [];
+                            if (fullDay > 0) counts.push(`全日${fullDay}名`);
+                            if (halfDay > 0) counts.push(`半日${halfDay}名`);
+                            if (night > 0) counts.push(`夜間${night}名`);
+
+                            msg += `\n${i}. ${otherName}/${counts.join(',')}/${siteName}`;
                         }
                     }
                 }
-                
+
                 sendText(msg);
                 return false;
             });
         });
-        
     </script>
+
 </body>
 </html>
+```
