@@ -34,9 +34,13 @@
                 <input class="form-control w-100 mt-1" name="siteName" required>
             </div>
         </div>
-        <p class="mt-3">その他</p>
+        <p class="mt-3">ご自身以外の出向状況も報告されますか？</p>
         <div>
-            <input class="form-control w-100 mt-1" name="notes" required>
+            <select class="form-control w-100 mt-1" name="otherAssignments" required>
+                <option value=""></option>
+                <option value="はい">はい⭕</option>
+                <option value="いいえ">いいえ❌自分の出向状況だけ報告します。</option>
+            </select>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -143,9 +147,9 @@
                 const name = $('input[name="name"]').val();
                 const assignmentDetails = $('select[name="assignmentDetails"]').val();
                 const siteName = assignmentDetails === '報告のみ' ? '' : $('input[name="siteName"]').val();
-                const notes = $('input[name="notes"]').val();
+                const otherAssignments = $('select[name="otherAssignments"]').val();
                 
-                const msg = `${workDate}\n${name}\n${assignmentDetails}\n${siteName}\n${notes}`;
+                const msg = `${workDate}\n${name}\n${assignmentDetails}\n${siteName}\n${otherAssignments}`;
                 sendText(msg);
 
                 return false;
